@@ -67,9 +67,9 @@ class ContributorTableViewController: UITableViewController {
         return CGFloat(88)
     }
 
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Contributors to this app"
-    }
+//    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "Contributors to this app"
+//    }
 
     //MARK: - UITableViewDelegate
 
