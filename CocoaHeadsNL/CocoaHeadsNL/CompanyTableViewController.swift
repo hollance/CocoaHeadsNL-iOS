@@ -84,7 +84,7 @@ class CompanyTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Companies sorted by place"
+        return "Companies sorted by city"
     }
 
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
