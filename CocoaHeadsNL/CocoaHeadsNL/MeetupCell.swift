@@ -65,7 +65,10 @@ class MeetupCell: UITableViewCell {
                     rsvpLabel.text = "\(yesRsvp) CocoaHeads going"
 
                     if let rsvpLimit = meetup.rsvp_limit?.intValue where rsvpLimit > 0 {
-                        rsvpLabel.text = rsvpLabel.text! + "\n\(rsvpLimit - yesRsvp) seats available"
+                        // This prevents the number from becoming negative.
+                        let available = max(0, rsvpLimit - yesRsvp)
+
+                        rsvpLabel.text = rsvpLabel.text! + "\n\(available) seats available"
                     }
                 } else {
                     rsvpLabel.text = ""
