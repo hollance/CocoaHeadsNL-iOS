@@ -65,18 +65,16 @@ class Company {
     let smallLogo: CKAsset?
 
     lazy var logoImage: UIImage = {
-        let logoImage: UIImage
-        if let logo = self.logo, data = NSData(contentsOfURL: logo.fileURL) {
-            return UIImage(data:data)!
+        if let logo = self.logo, data = NSData(contentsOfURL: logo.fileURL), image = UIImage(data: data) {
+            return image
         } else {
             return UIImage(named: "CocoaHeadsNLLogo")!
         }
     }()
 
     lazy var smallLogoImage: UIImage = {
-        let logoImage: UIImage
-        if let logo = self.smallLogo, data = NSData(contentsOfURL: logo.fileURL) {
-            return UIImage(data:data)!
+        if let logo = self.smallLogo, data = NSData(contentsOfURL: logo.fileURL), image = UIImage(data: data) {
+            return image
         } else {
             return UIImage(named: "CocoaHeadsNLLogo")!
         }
@@ -124,13 +122,8 @@ class Job {
     }
 
     lazy var logoImage: UIImage = {
-        let logoImage: UIImage
-        if let logoURL = self.logoURL, data = NSData(contentsOfURL: logoURL) {
-            if let image = UIImage(data:data) {
-                return image
-            } else {
-                return UIImage(named: "CocoaHeadsNLLogo")!
-            }
+        if let logoURL = self.logoURL, data = NSData(contentsOfURL: logoURL), image = UIImage(data: data) {
+            return image
         } else {
             return UIImage(named: "CocoaHeadsNLLogo")!
         }
@@ -234,18 +227,16 @@ class Meetup {
     let meetupUrl: String?
 
     lazy var logoImage: UIImage = {
-        let logoImage: UIImage
-        if let logo = self.logo, data = NSData(contentsOfURL: logo.fileURL) {
-            return UIImage(data:data)!
+        if let logo = self.logo, data = NSData(contentsOfURL: logo.fileURL), image = UIImage(data: data) {
+            return image
         } else {
             return UIImage(named: "CocoaHeadsNLLogo")!
         }
     }()
 
     lazy var smallLogoImage: UIImage = {
-        let logoImage: UIImage
-        if let logo = self.smallLogo, data = NSData(contentsOfURL: logo.fileURL) {
-            return UIImage(data:data)!
+        if let logo = self.smallLogo, data = NSData(contentsOfURL: logo.fileURL), image = UIImage(data: data) {
+            return image
         } else {
             return UIImage(named: "CocoaHeadsNLLogo")!
         }
